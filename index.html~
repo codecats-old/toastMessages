@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<script type="text/javascript" src="./jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="./toast/toasts.min.js"></script>
+<link type="text/css" rel="stylesheet" href="./toast/toast/toasts.min.css" />
+		<!--<script type="text/javascript" src="./toast/src/main/javascript/jquery.toastmessage.js"></script>
+		<link type="text/css" rel="stylesheet" href="./toast/src/main/resources/css/jquery.toastmessage.css" />
+
+		<script type="text/javascript" src="./toastr/toastr.js"></script>
+		<link type="text/css" rel="stylesheet" href="./toastr/toastr.css" />
+		<style>
+.toast-error, .toast-success, toast-info, .toast-warrning, .toast {
+	background:#333;
+}
+.toast{
+	cursor:default;
+}
+.toast-message{
+	font-family: lucida Grande;
+	font-size: 14px;
+}
+/*-------*/
+.toast-bottom-middle-center{
+	bottom: 0;
+	left: 50%;
+	margin-left: -140px;
+	margin-top: -40px;
+	width: 100%;
+	top:70%;
+}
+.toast-position-my-bottom-center{
+	position: fixed;
+	left: 50%;
+	margin-left: -140px;
+	margin-top: -40px;
+	top: 70%;
+
+}
+		</style>-->
+	</head>
+<body>
+<button id="toastJ">toastmessage</button>
+<button id="toastR">toastr</button>
+<hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>	
+<hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>	
+<hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>	
+<hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>	
+
+<script>
+	$().toastmessage({
+		text     : 'init',
+		sticky   : false,
+		position : 'top-right',//'my-bottom-center',
+		//  type     : 'success',
+		close    : function () {
+		console.log("toast is closed ...");
+		}
+        });
+ $.fn.toastr =toastr;
+	$().toastr.options={
+		"debug": false,
+		"positionClass": "toast-bottom-middle-center",//"toast-bottom-full-width",
+		"onclick": null,
+		"fadeIn": 300,
+		"fadeOut": 1000,
+		"timeOut": 3000,
+		"extendedTimeOut": 1000
+	};
+	$('#toastJ').click(function(event){
+		$().toastmessage('showErrorToast', '<b>title</b><br>Are you the 6 fingered man?');
+		//$().toastmessage({sticky:true});
+
+	});
+	$('#toastR').click(function(event){
+		$().toastr.error('Are you the 6 fingered man?', 'title');
+	});
+
+
+</script>
+
+</body>
+</html>
+
+    

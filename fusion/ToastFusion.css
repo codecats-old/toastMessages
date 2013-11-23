@@ -1,0 +1,27 @@
+.toast-error, .toast-success, toast-info, .toast-warrning, .toast {
+	background:#333;
+}
+.toast{
+	cursor:default;
+}
+.toast-message{
+	font-family: lucida Grande;
+	font-size: 14px;
+}
+/*-------*/
+.toast-bottom-middle-center{
+	bottom: 0;
+	left: 50%;
+	margin-left: -140px;
+	margin-top: -40px;
+	width: 100%;
+	top:70%;
+}
+.toast-position-my-bottom-center{
+	position: fixed;
+	left: 50%;
+	margin-left: -140px;
+	margin-top: -40px;
+	top: 70%;
+
+}
